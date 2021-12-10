@@ -127,9 +127,9 @@ function populateSelectMenu(jsonData)
     if (!jsonData) return;
     let selectMenu = document.getElementById("selectMenu");
     const optionsArray = createSelectOptions(jsonData);
-    for (option in optionsArray)
+    for (let i = 0; i < optionsArray.length; i++)
     {
-        selectMenu.append(option);
+        selectMenu.append(optionsArray[i]);
     }
     return selectMenu;
 }
